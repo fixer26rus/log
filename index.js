@@ -22,11 +22,18 @@ const log = {
   custom: () => {},
 };
 
+const addZero = (i) => {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+};
+
 const buildLogger = level => {
   log[level] = (message, ...args) => {
     const date = new Date();
     console.log(
-      `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
+      `${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`,
       '-',
       colors[colorsLevel[level]](level) + ':',
       message,
