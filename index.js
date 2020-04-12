@@ -37,4 +37,4 @@ const buildLogger = level => {
 
 Object.keys(colorsLevel).forEach(level => buildLogger(level));
 
-module.exports= { log };
+module.exports = log;
