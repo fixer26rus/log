@@ -1,5 +1,5 @@
 {
-  "name": "f-log",
+  "name": "@fixer.ru/log",
   "version": "1.0.0",
   "description": "Better console.log",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fixer26rus/f-log.git"
+    "url": "git+https://github.com/fixer26rus/log.git"
   },
   "keywords": [
     "console",
@@ -17,9 +17,9 @@
   "author": "Fixer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fixer26rus/f-log/issues"
+    "url": "https://github.com/fixer26rus/log/issues"
   },
-  "homepage": "https://github.com/fixer26rus/f-log#readme",
+  "homepage": "https://github.com/fixer26rus/log#readme",
   "dependencies": {
     "colors": "^1.4.0"
   }
