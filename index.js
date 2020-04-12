@@ -1,4 +1,4 @@
-import colors from 'colors';
+const colors= require('colors');
 
 const colorsLevel = {
   error: 'red',
@@ -11,7 +11,16 @@ const colorsLevel = {
   custom: 'blue',
 };
 
-const log = {};
+const log = {
+  error: () => {},
+  debug: () => {},
+  warn: () => {},
+  data: () => {},
+  info: () => {},
+  verbose: () => {},
+  silly: () => {},
+  custom: () => {},
+};
 
 const buildLogger = level => {
   log[level] = (message, ...args) => {
@@ -28,4 +37,4 @@ const buildLogger = level => {
 
 Object.keys(colorsLevel).forEach(level => buildLogger(level));
 
-export { log };
+module.exports= { log };
