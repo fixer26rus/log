@@ -1,4 +1,4 @@
-import 'colors';
+import colors from 'colors';
 
 const colorsLevel = {
   error: 'red',
