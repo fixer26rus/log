@@ -1,0 +1,23 @@
+{
+  "name": "f-log",
+  "version": "1.0.0",
+  "description": "Better console.log",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fixer26rus/f-log.git"
+  },
+  "keywords": [
+    "console",
+    "log"
+  ],
+  "author": "Fixer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fixer26rus/f-log/issues"
+  },
+  "homepage": "https://github.com/fixer26rus/f-log#readme"
+}
