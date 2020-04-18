@@ -20,7 +20,5 @@
     "url": "https://github.com/fixer26rus/log/issues"
   },
   "homepage": "https://github.com/fixer26rus/log#readme",
-  "dependencies": {
-    "colors": "^1.4.0"
-  }
+  "dependencies": {}
 }
