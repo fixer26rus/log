@@ -4,6 +4,16 @@
 ## Installation:
 npm install colors
 
+## Importing module:
+#### Node.js:
+const log = require('./index.js');\
+or\
+const {log} = require('./index.js');\
+#### ES6-Modules:
+import { log } from '@fixer.ru/log';\
+or\
+import * as log from '@fixer.ru/log';
+
 ## Example usage:
 log.error('test message#1');\
 log.debug('test message#2');\
