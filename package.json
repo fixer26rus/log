@@ -1,6 +1,6 @@
 {
   "name": "@fixer.ru/log",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Better console.log",
   "main": "index.js",
   "scripts": {
