@@ -4,11 +4,11 @@
 ## Installation:
 npm install colors
 
-## Importing module:
+## Importing library:
 #### Node.js:
 const log = require('./index.js');\
 or\
-const {log} = require('./index.js');\
+const { log } = require('./index.js');
 #### ES6-Modules:
 import { log } from '@fixer.ru/log';\
 or\
@@ -25,7 +25,7 @@ log.silly('test message#7');\
 log.custom('test message#8');\
 ![Screenshot](images/screen.png)
 
-#####You can also pass an object as argument:\
+#### You can also pass an object as argument:
 log.info('test message: ', {field: 'value'});\
 log.error('test message: ', new Error('test error'));\
 ![Screenshot](images/screen2.png)
