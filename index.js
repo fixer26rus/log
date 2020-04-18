@@ -1,14 +1,12 @@
-const colors= require('colors');
-
-const colorsLevel = {
-  error: 'red',
-  debug: 'magenta',
-  warn: 'yellow',
-  data: 'grey',
-  info: 'green',
-  verbose: 'cyan',
-  silly: 'white',
-  custom: 'blue',
+const _colorsLevel = {
+  error: '31',
+  debug: '35',
+  warn: '33',
+  data: '1',
+  info: '32',
+  verbose: '36',
+  silly: '37',
+  custom: '34',
 };
 
 const log = {
@@ -22,28 +20,36 @@ const log = {
   custom: () => {},
 };
 
-const addZero = (i) => {
+const _addZero = i => {
   if (i < 10) {
-    i = "0" + i;
+    i = '0' + i;
   }
   return i;
 };
 
+const _colorLevel = (level, defaultColor) => {
+  return defaultColor ? level : `\x1b[${_colorsLevel[level]}m${level}\x1b[0m`;
+};
+
 const buildLogger = level => {
-  log[level] = (message, ...args) => {
+  const browserErr = typeof window !== 'undefined' && level === 'error';
+  const browserWarn = typeof window !== 'undefined' && level === 'warn';
+  const unsupportedBrowser = typeof window !== 'undefined' && !window['chrome'];
+
+  log[level] = (...args) => {
     const date = new Date();
-    console.log(
-      `${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`,
-      '-',
-      colors[colorsLevel[level]](level) + ':',
-      message,
+    console[browserErr ? 'error' : browserWarn ? 'warn' : 'log'](
+      `${_addZero(date.getHours())}:${_addZero(date.getMinutes())}:${_addZero(date.getSeconds())} - ${_colorLevel(
+        level,
+        browserErr || browserWarn || unsupportedBrowser,
+      )}` + ':',
       ...args,
     );
   };
 };
 
-Object.keys(colorsLevel).forEach(level => buildLogger(level));
+Object.keys(_colorsLevel).forEach(level => buildLogger(level));
 
-log.log=log;
+log.log = log;
 
 module.exports = log;

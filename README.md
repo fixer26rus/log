@@ -1,8 +1,8 @@
-# Log - is a tiny library that modifies default console.log.
-
+# Log - is a tiny lightweight library, that modifies default console functions.
+You can use this library in node.js or any browser, but only node.js and chromium browsers supports console coloring 
 
 ## Installation:
-npm install colors
+npm i @fixer.ru/log
 
 ## Importing library:
 #### Node.js:
