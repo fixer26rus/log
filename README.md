@@ -23,9 +23,9 @@ log.info('test message#5');\
 log.verbose('test message#6');\
 log.silly('test message#7');\
 log.custom('test message#8');\
-![Screenshot](images/screen.png)
+![Image alt](https://github.com/fixer26rus/images-repo/blob/master/log/screen.png?raw=true)
 
 #### You can also pass an object as argument:
 log.info('test message: ', {field: 'value'});\
 log.error('test message: ', new Error('test error'));\
-![Screenshot](images/screen2.png)
+![Image alt](https://github.com/fixer26rus/images-repo/blob/master/log/screen2.png?raw=true)
